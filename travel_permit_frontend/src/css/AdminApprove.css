@@ -1,0 +1,95 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+
+.approval-wrap {
+  margin-left: 35px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* To center all child containers */
+  gap: 10px; /* Space between each container */
+}
+.container-approval {
+  display: flex;
+  flex-direction: column; /* Ensures content stacks vertically */
+  justify-content: space-between; /* Ensures space between main content and button */
+  position: relative;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+  padding: 30px;
+  margin-bottom: 20px;
+  width: 750px;
+
+  height: auto;
+  border-radius: 10px;
+}
+
+.small-container-approval {
+  flex-grow: 1; /* Takes up available space, pushes buttons down */
+}
+
+.small-container-approval p,
+.small-container p {
+  margin-bottom: 10px; /* Add space between <p> elements */
+}
+
+.Btn-container-approval {
+  display: flex;
+  gap: 10px; /* Space between the buttons */
+  position: relative; /* No need for absolute, flex will handle this */
+  margin-top: auto; /* Push the button container to the bottom */
+}
+
+.btn-reject,
+.btn-approval {
+  padding: 12px;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  width: 100%;
+  font-size: 1.1rem;
+  transition: transform 0.3s ease;
+}
+
+.btn-reject {
+  background-color: red;
+  margin-right: 10px;
+}
+
+.btn-approval {
+  background-color: green;
+}
+
+.btn-reject:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+  background-color: red;
+}
+.btn-approval:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+  background-color: green;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .container-approval {
+    flex-direction: column;
+    height: auto;
+    padding: 20px;
+    width: 100%; /* More responsive width */
+  }
+
+  .small-container-approval {
+    margin-bottom: 10px;
+    margin-right: 0; /* Reset the margin for smaller screens */
+  }
+  .approval-wrap{
+    margin-left: 0;
+    padding: 10px;
+  }
+}
